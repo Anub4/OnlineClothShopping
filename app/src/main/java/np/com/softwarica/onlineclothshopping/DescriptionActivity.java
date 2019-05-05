@@ -23,7 +23,7 @@ public class DescriptionActivity extends AppCompatActivity {
         imgView = findViewById(R.id.imgView);
 
         tvName.setText(getIntent().getStringExtra("name"));
-        tvPrice.setText("Rs." + getIntent().getStringExtra("price"));
+        tvPrice.setText("Rs." + getIntent().getIntExtra("price", 0));
         tvDesc.setText(getIntent().getStringExtra("desc"));
         imgView.setImageResource(getResources().getIdentifier(getIntent().getStringExtra("imageName"), "drawable", getPackageName()));
     }
